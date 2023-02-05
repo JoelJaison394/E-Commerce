@@ -5,9 +5,6 @@ const connectDatabase = ()=>{
 .then((data)=>{
     console.log(`Mondodb connected with server: ${data.Connection.name}`)
 })
-.catch((err)=>{
-    console.log(err);
-})
 }
 
 module.exports = connectDatabase;
