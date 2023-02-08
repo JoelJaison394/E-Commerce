@@ -5,9 +5,11 @@ const app = express();
 app.use(express.json())
 
 // Route Imports 
-const product = require("./routes/productRoute");
+const productRoute = require("./routes/productRoute");
+const userRoute = require("./routes/userRoutes");
 
-app.use("/api/v1",product)
+app.use("/api/v1",productRoute)
+app.use("/api/v1",userRoute)
 
 //Middlewares for Errors
 app.use(errorMiddleware)
